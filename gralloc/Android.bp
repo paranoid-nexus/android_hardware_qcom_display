@@ -25,6 +25,7 @@ cc_library_shared {
         "-Wno-sign-conversion",
         "-Wno-unused-parameter",
         "-Wno-unused-variable",
+        "-Wno-implicit-fallthrough",
     ] + select(soong_config_variable("qtidisplay", "target_no_raw10_custom_format"), {
         "true": ["-DNO_RAW10_CUSTOM_FORMAT"],
         default: [],
